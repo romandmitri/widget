@@ -21,8 +21,10 @@
 /.next/
 /out/
 
-# production
+# builds
 /build
+/src/public/loader.generated.js
+/src/modules/widget/widget.generated.css
 
 # misc
 .DS_Store
