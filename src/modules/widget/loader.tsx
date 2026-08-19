@@ -3,7 +3,7 @@ import widgetCss from "@/src/modules/widget/widget.generated.css";
 import { createRoot } from "react-dom/client";
 
 (function () {
-	console.log("loader...");
+	console.log("widget.loader...");
 
 	const script = document.currentScript;
 	if (!script) return console.error("loader.script.MISSING");

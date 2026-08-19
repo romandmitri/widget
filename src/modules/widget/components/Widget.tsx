@@ -1,23 +1,36 @@
+"use client";
+
 import { cn } from "@/src/common/components/cn";
+import { useWidgetContext, WidgetProvider } from "@/src/modules/widget/context/WidgetProvider";
 
 type Props = {
 	apiKey: string;
 };
 
 export const Widget = (p: Props) => {
+	const apiKey = p.apiKey;
+	console.log("Widget", { apiKey });
+
+	const wc = useWidgetContext({
+		apiKey: p.apiKey,
+		isOpen: false,
+	});
+
+	const isOpen = wc.isOpen;
+
 	return (
-		<div
-			className={cn(
-				//
-				"bg-secondary text-primary",
-				{ dark: true },
-				{ "fixed inset-0": false },
-			)}
-		>
-			<div className="flex items-center justify-between gap-4">
-				<h2 className="flex items-center gap-2">{"Widget"}</h2>
-				<span className="font-mono text-xs">{`Key: ${p.apiKey}`}</span>
+		<WidgetProvider context={wc}>
+			<div
+				className={cn(
+					//
+					// "dark",
+					"bg-secondary text-primary",
+					{ "fixed inset-0": wc.isOpen },
+				)}
+			>
+				<div>{!isOpen && <button onClick={() => wc.setIsOpen(true)}>{"open"}</button>}</div>
+				<div>{isOpen && <button onClick={() => wc.setIsOpen(false)}>{"close"}</button>}</div>
 			</div>
-		</div>
+		</WidgetProvider>
 	);
 };

@@ -5,7 +5,7 @@
 
 Mini project to demonstrate embed widget.
 
-This uses Next.js as it is quick and dirty... and free to host.
+This uses Next.js as it is quick and dirty... and free to host on Vercel.
 
 --- 
 
