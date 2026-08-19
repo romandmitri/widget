@@ -1,6 +1,6 @@
 {
 	"name": "widget",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"private": true,
 	"scripts": {
 		"dev": "concurrently \"npm run dev:loader\" \"next dev -p 2100\"",
