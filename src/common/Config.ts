@@ -3,6 +3,6 @@ const initString = (key: string, defaultValue: string): string => {
 };
 
 export const Config = {
-	DevAlpha: initString("DEV_ALPHA", "missing"),
+	DevAlpha: initString("DEV_ALPHA", ""),
 	Version: process.env.APP_VERSION,
 };
