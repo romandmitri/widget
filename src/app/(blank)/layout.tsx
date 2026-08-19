@@ -8,7 +8,7 @@ export default function Layout(p: LayoutProps<"/">) {
 	return (
 		<html lang="en">
 			<body>
-				<main className={""}>{p.children}</main>
+				<main>{p.children}</main>
 			</body>
 		</html>
 	);
